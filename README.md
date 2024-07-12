@@ -1,5 +1,5 @@
 # Custom Pwnagotchi Plugins
-This repositry contains all of my custom-made pwnagotchi plugins (the ones that were finished). You can set them up using the following guide(s) or if you know what to do, the setup is also included in each file. If you found any bugs or have an issue, you can report them [here](https://github.com/xentrify/custom-pwnagotchi-plugins/issues/new/choose)
+This repository contains all of my custom-made pwnagotchi plugins (the ones that were finished). You can set them up using the following guide(s) or if you know what to do, the setup is also included in each file. If you found any bugs or have an issue, you can report them [here](https://github.com/xentrify/custom-pwnagotchi-plugins/issues/new/choose)
 # Adding these plugins to your pwnagotchi
 Add to `/etc/pwnagotchi/config.toml` :
 ```bash
@@ -56,4 +56,4 @@ For the location sending to work you will need a stable connection with your iPh
 * @nagy_craig for the `display-password` plugin
 
 # License
-This repositry is licensed under the GPL 3 license.
+This repository is licensed under the GPL 3 license.
