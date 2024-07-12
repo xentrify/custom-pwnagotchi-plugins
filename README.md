@@ -1,6 +1,7 @@
 # Custom Pwnagotchi Plugins
 This repository contains all of my custom-made pwnagotchi plugins (the ones that were finished). You can set them up using the following guide(s) or if you know what to do, the setup is also included in each file. If you found any bugs or have an issue, you can report them [here](https://github.com/xentrify/custom-pwnagotchi-plugins/issues/new/choose)
-# Adding these plugins to your pwnagotchi
+# Installation
+### Network installation
 Add to `/etc/pwnagotchi/config.toml` :
 ```bash
 main.custom_plugin_repos = [
@@ -10,6 +11,13 @@ main.custom_plugin_repos = [
 ```
 
 Next, `sudo pwnagotchi plugins update` and `sudo pwnagotchi plugins list`.
+
+Now you should be able to continue with configuring the plugins using the next section.
+
+### Manual installation
+1. Download the the github files [here](https://github.com/xentrify/custom-pwnagotchi-plugins/archive/master.zip), or using git clone: `git clone https://github.com/xentrify/custom-pwnagotchi-plugins.git`.
+2. Extract the files if needed and `cd` in the folder.
+3. Copy the plugins of choice to the custom-plugin directory using `cp <filename> /usr/local/share/pwnagotchi/custom-plugins/<filename>`.
 
 Now you should be able to continue with configuring the plugins using the next section.
 # Plugins
@@ -30,6 +38,11 @@ main.plugins.aftershake.wordlist_folder = "/root/custom_folder/" # (default: "/r
 main.plugins.aftershake.hashie = true # (default: false)
 main.plugins.aftershake.face = "(>.O)" # (default: "(◕.◕)")
 ```
+### Package Requirements
+* hcxpcapngtool (`sudo apt-get -y install hcxtools`) (if hashie is enabled)
+* aircrack-ng (`sudo apt-get -y install aircrack-ng`)
+> [!NOTE]
+> Try running `sudo run apt-get update` if you run into issues. Do NOT run `sudo apt-get upgrade` as this can break your pwnagotchi installation.
 ## iPhone_GPS
 Saves GPS coordinates whenever an handshake is captured. Uses your iPhone's GPS via website requests and Shortcuts.
 ### Pwnagotchi Configuration
