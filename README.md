@@ -17,7 +17,7 @@ Now you should be able to continue with configuring the plugins using the next s
 ### Manual installation
 1. Download the the github files [here](https://github.com/xentrify/custom-pwnagotchi-plugins/archive/master.zip), or using git clone: `git clone https://github.com/xentrify/custom-pwnagotchi-plugins.git`.
 2. Extract the files if needed and `cd` in the folder.
-3. Copy the plugins of choice to the custom-plugin directory using `cp <filename> /usr/local/share/pwnagotchi/custom-plugins/<filename>`.
+3. Copy the plugins of choice to the custom-plugin directory using `sudo cp <filename> /usr/local/share/pwnagotchi/custom-plugins/<filename>`.
 
 Now you should be able to continue with configuring the plugins using the next section.
 # Plugins
