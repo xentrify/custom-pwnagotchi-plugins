@@ -7,7 +7,8 @@
 #   [OPTIONAL] main.plugins.linespacing = 15 (default: 10)
 #####
 # Requirements:
-# - None
+# - My iPhone GPS Automation (Shortcut URL): https://routinehub.co/shortcut/19128/
+# - Pwnagotchi connection with your iPhone, using the bt-tether plugin.
 #####
 # Tested on:
 #   Hardware:
