@@ -19,7 +19,7 @@
 #
 #   main.plugins.aftershake.enabled = true
 #   [OPTIONAL] main.plugins.aftershake.wordlist_folder = "/root/wordlist_folder/" (default: "/root/wordlist_folder/")
-#   [OPTIONAL] main.plugins.aftershake.hashie = true (default: False)
+#   [OPTIONAL] main.plugins.aftershake.hashie = false (default: true)
 #   [OPTIONAL] main.plugins.aftershake.face = "(◕O◕)" (default: "(◕.◕)")
 #####
 # Requirements:
@@ -73,7 +73,7 @@ class afterShake(plugins.Plugin):
         self.correct_files = list()
 
         self.face = self.options["face"] if "face" in self.options else "(◕.◕)"
-        self.use_hashie = self.options["hashie"] if "hashie" in self.options else False
+        self.use_hashie = self.options["hashie"] if "hashie" in self.options else True
         if self.use_hashie: self.required.extend(("hcxpcapngtool", "tcpdump"))
         self.wordlist_folder = self.options["wordlist_folder"] if "wordlist_folder" in self.options else "/root/wordlist_folder/"
 
