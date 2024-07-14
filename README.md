@@ -1,5 +1,6 @@
 # Custom Pwnagotchi Plugins
 This repository contains all of my custom-made pwnagotchi plugins (the ones that were finished). You can set them up using the following guide(s) or if you know what to do, the setup is also included in each file. If you found any bugs or have an issue, you can report them [here](https://github.com/xentrify/custom-pwnagotchi-plugins/issues/new/choose) or on [reddit](https://reddit.com/u/xentrifydev). Also reach out to me if you have any suggestions or ideas for new plugins, I would love to hear them!
+
 # Installation
 ### Network installation
 Add to `/etc/pwnagotchi/config.toml` :
@@ -35,12 +36,12 @@ main.plugins.aftershake.enabled = true
 **Optional:**
 ```toml
 main.plugins.aftershake.wordlist_folder = "/root/custom_folder/" # (default: "/root/wordlist_folder/")
-main.plugins.aftershake.hashie = true # (default: false)
+main.plugins.aftershake.hashie = false # (default: true)
 main.plugins.aftershake.face = "(>.O)" # (default: "(◕.◕)")
 main.plugins.aftershake.orientation = "vertical" # (default: horizontal)
 ```
 > [!NOTE]
-> Don't forgot to enable hashie if you want your handshakes to be converted!
+> ~~Don't forgot to enable hashie if you want your handshakes to be converted!~~ Hashie is now enabled by default! Make sure to download the required packages.
 ### Package Requirements
 * hcxpcapngtool (`sudo apt-get -y install hcxtools`) (if hashie is enabled)
 * aircrack-ng (`sudo apt-get -y install aircrack-ng`)
