@@ -63,7 +63,8 @@ Set up this [this shortcut](https://routinehub.co/shortcut/19128/) to send the G
 
 For the location sending to work you will need a stable connection with your iPhone and pwnagotchi using bt-tether.
 
-
+# Todo
+- [x] Nothing here yet ;(
 # Credits
 * [PwnPeter](https://github.com/PwnPeter) for the easy plugin configuration part.
 * junohea.mail@gmail.com for the `hashie-hcxpcapngtool` plugin
