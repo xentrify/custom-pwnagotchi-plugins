@@ -37,7 +37,10 @@ main.plugins.aftershake.enabled = true
 main.plugins.aftershake.wordlist_folder = "/root/custom_folder/" # (default: "/root/wordlist_folder/")
 main.plugins.aftershake.hashie = true # (default: false)
 main.plugins.aftershake.face = "(>.O)" # (default: "(◕.◕)")
+main.plugins.aftershake.orientation = "vertical" # (default: horizontal)
 ```
+> [!NOTE]
+> Don't forgot to enable hashie if you want your handshakes to be converted!
 ### Package Requirements
 * hcxpcapngtool (`sudo apt-get -y install hcxtools`) (if hashie is enabled)
 * aircrack-ng (`sudo apt-get -y install aircrack-ng`)
