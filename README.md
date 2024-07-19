@@ -21,12 +21,13 @@ Now you should be able to continue with configuring the plugins using the next s
 1. Download the the github files [here](https://github.com/xentrify/custom-pwnagotchi-plugins/archive/master.zip), or using git clone: `git clone https://github.com/xentrify/custom-pwnagotchi-plugins.git`.
 2. Extract the files if needed and `cd` in the folder.
 3. Copy the plugins of choice to the custom-plugin directory using `sudo cp <filename> /usr/local/share/pwnagotchi/custom-plugins/<filename>`.
+Now you should be able to continue with configuring the plugins using the next section.
 > [!NOTE]
-> If that doesnt work add this line to config.toml (at least a fix for the aluminum-ice image):
+> If the plugins do not show up, add this line to config.toml (at least a fix for the aluminum-ice image):
 > ```toml
 > main.custom_plugins = "/usr/local/share/pwnagotchi/available-plugins"
 > ```
-Now you should be able to continue with configuring the plugins using the next section.
+
 # Plugins
 ## Aftershake
 A plugin that handles everything after a handshake. AircrackOnly, Hashie, Quickdic, etc. All in one.
