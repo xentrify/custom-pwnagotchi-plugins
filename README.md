@@ -2,6 +2,7 @@
 This repository contains all of my custom-made pwnagotchi plugins (the ones that were finished). You can set them up using the following guide(s) or if you know what to do, the setup is also included in each file. If you found any bugs or have an issue, you can report them [here](https://github.com/xentrify/custom-pwnagotchi-plugins/issues/new/choose) or on [reddit](https://reddit.com/u/xentrifydev). Also reach out to me if you have any suggestions or ideas for new plugins, I would love to hear them!
 # Todo
 - [ ] Rewrite iPhone_GPS using [GPS_more](https://github.com/Sniffleupagus/pwnagotchi_plugins/blob/main/gps_more.py)
+- [ ] Fix package checking (aftershake)
 - [ ] Release new plugin ;)
 # Installation
 ### Network installation
