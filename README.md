@@ -1,5 +1,3 @@
-# Read first!
-I've found some issues with `aftershake.py` and I am looking into it. I can't test jayofelony, so if you can, please contact me!
 # Custom Pwnagotchi Plugins
 This repository contains all of my custom-made pwnagotchi plugins (the ones that were finished). You can set them up using the following guide(s) or if you know what to do, the setup is also included in each file. If you found any bugs or have an issue, you can report them [here](https://github.com/xentrify/custom-pwnagotchi-plugins/issues/new/choose) or on [reddit](https://reddit.com/u/xentrifydev). Also reach out to me if you have any suggestions or ideas for new plugins, I would love to hear them!
 # Todo
