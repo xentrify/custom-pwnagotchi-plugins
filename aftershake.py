@@ -34,12 +34,12 @@
 #   Running: https://github.com/jayofelony/pwnagotchi/releases/tag/v2.8.6
 
 
-
 import logging
 import subprocess
 import os
 import re
 import time
+import shutil
 from threading import Lock
 
 import pwnagotchi.plugins as plugins
@@ -73,7 +73,7 @@ class afterShake(plugins.Plugin):
         self.correct_files = list()
 
         self.face = self.options["face"] if "face" in self.options else "(◕.◕)"
-        self.use_hashie = self.options["hashie"] if "hashie" in self.options else True
+        self.use_hashie = self.options["hashie"] if "hashie" in self.options else False
         if self.use_hashie: self.required.extend(("hcxpcapngtool", "tcpdump"))
         self.wordlist_folder = self.options["wordlist_folder"] if "wordlist_folder" in self.options else "/root/wordlist_folder/"
 
@@ -101,17 +101,23 @@ class afterShake(plugins.Plugin):
             self.ready = False
     def _cleanup(self, filename):
         removed = []
+        if not os.path.exists("/root/handshakes-invalid/"):
+            os.makedirs("/root/handshakes-invalid")
+            logging.info("[afterShake] Created /root/handshakes-invalid/")
+
         if os.path.exists(filename):
-            head, tail = os.path.split(filename)
-            os.replace(filename, f"/root/invalid/{tail}")
-            #os.remove(filename)
+            #head, tail = os.path.split(filename)
+            #os.replace(filename, f"/root/invalid/{tail}")
+            shutil.copy(filename, "/root/handshakes-invalid/")
+            os.remove(filename)
             removed.append(filename)
 
         gps_file = filename.replace(".pcap", ".gps.json")
         if os.path.exists(gps_file):
-            head, tail = os.path.split(gps_file)
-            os.replace(gps_file, f"/root/invalid/{tail}")
-            #os.remove(gps_file)
+            #head, tail = os.path.split(gps_file)
+            #os.replace(gps_file, f"/root/invalid/{tail}")
+            shutil.copy(filename, "/root/handshakes-invalid/")
+            os.remove(gps_file)
             removed.append(gps_file)
 
         if removed:
