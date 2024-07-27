@@ -14,7 +14,7 @@ main.custom_plugin_repos = [
 ]
 ```
 
-Next, `sudo pwnagotchi plugins update` and `sudo pwnagotchi plugins list`.
+Next, `sudo pwnagotchi plugins update` and `sudo pwnagotchi plugins install <plugin>`.
 
 Now you should be able to continue with configuring the plugins using the next section.
 
@@ -23,11 +23,6 @@ Now you should be able to continue with configuring the plugins using the next s
 2. Extract the files if needed and `cd` in the folder.
 3. Copy the plugins of choice to the custom-plugin directory using `sudo cp <filename> /usr/local/share/pwnagotchi/custom-plugins/<filename>`.
 Now you should be able to continue with configuring the plugins using the next section.
-> [!NOTE]
-> If the plugins do not show up, add this line to config.toml (at least a fix for the aluminum-ice image):
-> ```toml
-> main.custom_plugins = "/usr/local/share/pwnagotchi/available-plugins"
-> ```
 
 # Plugins
 ## Aftershake
