@@ -48,7 +48,7 @@ For the FTP server to work, you'll need to generate certificates so you can send
 Save the generated files (cert.pem, key.pem) somewhere as you will need to point to them when you run the server script.
 
 ### Server Configuration 2 (The Script)
-The server script is compatible with both Linux and Windows (MacOS should also work). You can download it from [here](https://example.com), and these are the options:
+The server script is compatible with both Linux and Windows (MacOS should also work). You can download it from [here](https://github.com/xentrify/custom-pwnagotchi-plugins/blob/main/remote_cracking_server.py), and these are the options:
 ```commandline
 usage: server.py [-h] [-i INTERVAL] [-p PORT] [-U USER] -P PASSWORD -d DIRECTORY -c CERT -k KEY -I INTERPRETER -w WORDLISTS
 
