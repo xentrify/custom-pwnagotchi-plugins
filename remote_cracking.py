@@ -70,7 +70,7 @@ class RemoteCracking(plugins.Plugin):
             return
 
         self.display_cracked = self.options["display_cracked"] if "display_cracked" in self.options else True
-        self.potfile = self.options["potfile"] if "potfile" in self.options else "/root/remote_cracking.potfile"
+        self.potfile = self.options["potfile"] if "potfile" in self.options else "/root/handshakes/remote_cracking.potfile"
         self.ready = True
         logging.info("[RemoteCracking] Plugin loaded successfully.")
 
