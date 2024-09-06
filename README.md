@@ -8,7 +8,6 @@ This repository contains all of my custom-made pwnagotchi plugins (the ones that
 ## Todo
 
 - [X] Release a new plugin! ([Thread](https://discord.com/channels/717817147853766687/1278003598416019518))
-- [x] Update README.md on how to setup Duck DNS
 - [ ] Rewrite iPhone_GPS using [GPS_more](https://github.com/Sniffleupagus/pwnagotchi_plugins/blob/main/gps_more.py)
 - [ ] Fix package checking (aftershake)
 
@@ -108,7 +107,7 @@ Create a directory named `remote_cracking` and copy the generated files `cert.pe
 1. Install `pyftpdlib` and `pyopenssl` using `python -m pip install pyftpdlib pyopenssl`.
 2. Download the server script using `curl -O https://raw.githubusercontent.com/xentrify/custom-pwnagotchi-plugins/main/remote_cracking_server.py .`.
 3. Download hashcat using `sudo apt-get install hashcat`
-4. Move the server script into the directory using `mv -t remote_cracking remote_cracking_server.py`.
+4. Move the server script into the directory using `mv remote_cracking_server.py remote_cracking`.
 5. Open the directory using `cd remote_cracking`.
 5. Create a handshake and wordlist directory using `mkdir wordlists handshakes`. 
 6. Place in the wordlists you want to use to crack. For testing, you can use `curl -O https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt wordlists`.
@@ -116,7 +115,7 @@ Create a directory named `remote_cracking` and copy the generated files `cert.pe
 ### 3) Starting the server
 
 **Windows**
-the following arguments are required: -P/--password, -d/--directory, -c/--cert-file, -k/--key-file, -I/--interpreter, -w/--wordlists
+
 1. If you followed the instructions and made every directory, you can use this command:
 
 ```python remote_cracking_server.py -d handshakes -c cert.pem -k key.pem -I hashcat-6.2.3/hashcat.exe -w wordlists -P yourpassword```
