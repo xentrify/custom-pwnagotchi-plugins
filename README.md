@@ -174,7 +174,7 @@ To get started, look up your router's IP address. On Windows, open command promp
 For Linux, try running `ip route show default`. Open the IP in your browser and log in. You can find the default login
 online or on the back of your router. The next steps will only be the settings as configuring them will differ per router. 
 Just search for your router's manual and read the instructions. You will first have to set a static IP for your PC. After
-this, forward your custom port and the port range `49152-65534`.
+this, forward `8888` (or your custom port) and the port range `49152-65534`.
 
 ### 6) Setting up Dynamic DNS
 
