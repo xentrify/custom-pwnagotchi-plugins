@@ -196,10 +196,20 @@ if __name__ == '__main__':
         print(colors.CLEAR)
         sys.exit()
 
-    ftp_server = FTPClass(args.port, args.user, args.password, args.directory, args.cert, args.key, public_ip, local_ip)
+    cwd = os.getcwd()
+    directory = os.path.join(cwd, args.directory)
+    cert = os.path.join(cwd, args.cert)
+    key = os.path.join(cwd, args.key)
+    interpreter = os.path.join(cwd, args.interpreter)
+    wordlists = os.path.join(cwd, args.wordlists)
+    data_file = os.path.join(directory, "data.txt")
+    out_file = os.path.join(directory, "cracked.txt")
+
+    ftp_server = FTPClass(args.port, args.user, args.password, directory, cert, key, public_ip, local_ip)
     ftp_thread = threading.Thread(target=ftp_server.run)
     ftp_thread.start()
-    cracking_class = CrackingClass(args.interpreter, args.wordlists, args.interval, args.directory, os.path.join(args.directory, "data.txt"), os.path.join(args.directory, "cracked.txt"))
+
+    cracking_class = CrackingClass(interpreter, wordlists, args.interval, directory, data_file, out_file)
     cracking_run_thread = threading.Thread(target=cracking_class.run)
     cracking_run_thread.start()
     cracking_thread = threading.Thread(target=cracking_class.cracking_thread)
