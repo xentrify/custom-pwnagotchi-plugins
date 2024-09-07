@@ -92,7 +92,7 @@ class RemoteCracking(plugins.Plugin):
             handshake_filenames = os.listdir(handshake_dir)
             handshake_paths = [os.path.join(handshake_dir, filename) for filename in handshake_filenames if
                                filename.endswith(".22000")]
-            handshake_paths = remove_whitelisted(handshake_paths, self.options["whitelist"])
+            handshake_paths = remove_whitelisted(handshake_paths, config['main']['whitelist'])
             handshake_new = set(handshake_paths) - set(reported) - set(self.skip)
             ftps = FTP_TLS()
             ftps.connect(self.ftp_server, self.ftp_port)
