@@ -8,7 +8,7 @@ This repository contains all of my custom-made pwnagotchi plugins (the ones that
 ## Todo
 
 - [X] Release a new plugin! ([Thread](https://discord.com/channels/717817147853766687/1278003598416019518))
-- [ ] Rewrite iPhone_GPS using [GPS_more](https://github.com/Sniffleupagus/pwnagotchi_plugins/blob/main/gps_more.py)
+- [ ] Rewrite iPhone_GPS using [GPS_more](https://github.com/Sniffleupagus/pwnagotchi_plugins/blob/main/gps_more.py) + fix it
 - [ ] Fix package checking (aftershake)
 
 ---
