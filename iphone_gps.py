@@ -7,8 +7,7 @@
 #   [OPTIONAL] main.plugins.linespacing = 15 (default: 10)
 #####
 # Requirements:
-# - My iPhone GPS Automation (Shortcut URL): https://routinehub.co/shortcut/19128/
-# - Pwnagotchi connection with your iPhone, using the bt-tether plugin.
+# - None
 #####
 # Tested on:
 #   Hardware:
@@ -96,6 +95,21 @@ class iPhoneGPS(plugins.Plugin):
     def on_ready(self, agent):
         logging.info("[iPhone-GPS] Plugin ready")
         self.running = True
+
+    def on_handshake(self, agent, filename, access_point, client_station):
+        if self.running:
+            if not self.stop or (self.stop and self.options.get("use_last_loc", False)):
+                gps_filename = filename.replace(".pcap", ".gps.json")
+
+                if self.coordinates and all([
+                    # avoid 0.000... measurements
+                    self.coordinates["Latitude"], self.coordinates["Longitude"]
+                ]):
+                    logging.info(f"[iPhone_GPS] saving GPS to {gps_filename} ({self.coordinates})")
+                    with open(gps_filename, "w+t") as fp:
+                        json.dump(self.coordinates, fp)
+                else:
+                    logging.info("[iPhone_GPS] not saving GPS. Couldn't find location.")
 
     def on_ui_setup(self, ui):
         try:
